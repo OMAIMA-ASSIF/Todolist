@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1f0735;
+    color: #fff;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    max-width: 500px;
+}
+.statistique-container{
+    padding: 30px;
+    border-radius:20px;
+    border:2px solid #D4BEE4;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px; 
+    width: 100%;
+
+}
+.details{
+    width: 100%;
+}
+#progress_bar{
+    width: 100%;
+    height: 10px;
+    background-color: #D4BEE4;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#progress{
+    width: 0%;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color: #1f0735;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    
+}
+input{
+    flex:1 ;
+    padding: 16px;
+    background-color: #66318d;
+    border: 1px solid #D4BEE4;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D4BEE4;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    outline:none;
+    border: none;
+    cursor: pointer;
+
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    /* adding */
+    list-style: none;
+    padding: 0;
+}
+.taskItem{
+    width: 100%;
+    display: flex;
+    background-color:#D4BEE4;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.task.completed{
+    text-decoration: line-through;
+    color:aqua;
+}
+.icons img { /* Style for icons */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px; /* Add some spacing between icons */
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow task text to take available space */
+}
+.task p {
+    margin-left: 10px;
+    flex-grow: 1;
+    word-break: break-word; /* prevent overflowing text*/
+}
