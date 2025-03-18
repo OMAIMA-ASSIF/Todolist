@@ -180,59 +180,6 @@
         <ul class="todo-list" id="todo-list"></ul>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                themeIcon.setAttribute('d', 'M12 2a1 1 0 011 1v2a1 1 0 01-2 0V3a1 1 0 011-1zm0 17a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zm-8-7a1 1 0 01-1-1H1a1 1 0 010-2h2a1 1 0 011 1v2a1 1 0 01-1 1zm16 0a1 1 0 01-1-1h2a1 1 0 010-2h-2a1 1 0 01-1 1v2a1 1 0 011 1zM6.22 6.22a1 1 0 011.41 0L9 7.59a1 1 0 01-1.41 1.41L6.22 7.63a1 1 0 010-1.41zm11.56 11.56a1 1 0 010-1.41l1.38-1.38a1 1 0 011.41 1.41l-1.38 1.38a1 1 0 01-1.41 0zM6.22 17.78a1 1 0 01-1.41 0l-1.38-1.38a1 1 0 011.41-1.41l1.38 1.38a1 1 0 010 1.41zm11.56-11.56a1 1 0 010 1.41L16.41 9a1 1 0 01-1.41-1.41l1.38-1.38a1 1 0 011.41 0z');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                themeIcon.setAttribute('d', 'M12 12a10 10 0 11-7.07 2.93A10 10 0 0112 12zm0 17a7 7 0 110-14 7 7 0 010 14z');
-            }
-        });
-
-        document.getElementById('add-btn').addEventListener('click', function() {
-            const taskInput = document.getElementById('todo-input');
-            const taskText = taskInput.value.trim();
-
-            if (taskText === '') {
-                alert('Please enter a task!');
-                return;
-            }
-
-            const taskList = document.getElementById('todo-list');
-            const taskItem = document.createElement('li');
-            taskItem.className = 'todo-item';
-
-            const taskCheckbox = document.createElement('input');
-            taskCheckbox.type = 'checkbox';
-            taskCheckbox.addEventListener('change', function() {
-                taskItem.classList.toggle('done');
-            });
-
-            const taskSpan = document.createElement('span');
-            taskSpan.textContent = taskText;
-
-            const deleteButton = document.createElement('button');
-            deleteButton.className = 'delete-btn';
-            deleteButton.textContent = 'Delete';
-            deleteButton.addEventListener('click', function() {
-                taskList.removeChild(taskItem);
-            });
-
-            taskItem.appendChild(taskCheckbox);
-            taskItem.appendChild(taskSpan);
-            taskItem.appendChild(deleteButton);
-            taskList.appendChild(taskItem);
-
-            taskInput.value = '';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
